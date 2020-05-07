@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-board = Board.create(title: 'Level 1'})
+board = Board.create(title: 'Level 1')
 
 Square.create(
     [
