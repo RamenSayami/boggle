@@ -1,0 +1,2 @@
+module CorrectWordsHelper
+end

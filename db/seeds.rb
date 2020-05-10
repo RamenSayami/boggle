@@ -109,3 +109,86 @@ Square.create(
         }
     ]
 )
+
+CorrectWord.create([
+    {
+        word: 'PEA',
+        board: board
+    },
+    {
+        word: 'APE',
+        board: board
+    },
+    {
+        word: 'APES',
+        board: board
+    },
+    {
+        word: 'CAKE',
+        board: board
+    },
+    {
+        word: 'PEAS',
+        board: board
+    },
+    {
+        word: 'PANT',
+        board: board
+    },
+    {
+        word: 'PASS',
+        board: board
+    },
+    {
+        word: 'LINT',
+        board: board
+    },
+    {
+        word: 'SUN',
+        board: board
+    },
+    {
+        word: 'CLASP',
+        board: board
+    },
+    {
+        word: 'NOT',
+        board: board
+    },
+    {
+        word: 'CLASPS',
+        board: board
+    },
+    {
+        word: 'TOSS',
+        board: board
+    },
+    {
+        word: 'SAINT',
+        board: board
+    },
+    {
+        word: 'SAP',
+        board: board
+    },
+    {
+        word: 'LIT',
+        board: board
+    },
+    {
+        word: 'SAT',
+        board: board
+    },
+    {
+        word: 'CLASS',
+        board: board
+    },
+    {
+        word: 'SANS',
+        board: board
+    },
+    {
+        word: 'PEAL',
+        board: board
+    }
+])
