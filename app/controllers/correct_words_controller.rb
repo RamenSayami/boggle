@@ -6,9 +6,9 @@ class CorrectWordsController < ApplicationController
         #TODO: evaluate if the word supplied is valid from the board.
 
         @board = Board.find(params[:board_id])
+        puts "Word to evaluate" +payload["word"].upcase;
         @board.correct_words.each{ |correct_word|
-            puts correct_word.word;
-            if(payload["word"] == correct_word.word) then
+            if(payload["word"].upcase == correct_word.word.upcase) then
                 render json: {status:'SUCCESS', word: payload["word"], message: "Correct Word!"}, status: :ok and return
             end
         }
