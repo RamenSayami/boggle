@@ -9,11 +9,15 @@ class CorrectWordsController < ApplicationController
         puts "[LOG] Word to evaluate " +payload["word"].upcase;
         valid = validateWordFromBoard(@board, payload["word"].upcase);
         puts "[LOG] Validated Word = " + valid.to_s;
-        @board.correct_words.each{ |correct_word|
-            if(payload["word"].upcase == correct_word.word.upcase) then
-                render json: {status:'SUCCESS', word: payload["word"], message: "Correct Word!"}, status: :ok and return
-            end
-        }
+        if(valid) 
+            @board.correct_words.each{ |correct_word|
+                if(payload["word"].upcase == correct_word.word.upcase) then
+                    render json: {status:true }, status: :ok and return
+                end
+            }
+        else 
+            render json: {status:'FAILURE', word: payload["word"], message: "Please enter word from board!"}, status: :bad_request and return
+        end
         #TODO: word api here, 
 
         render json: {status:'FAILURE', word: payload["word"], message: "Incorrect Word!"}, status: :not_acceptable and return
@@ -78,12 +82,10 @@ class CorrectWordsController < ApplicationController
         loopFinishedFlag = false;
         for i in rowStart..rowEnd do
             for j in colStart..colEnd do
-                puts "i,j = " + i.to_s + "," + j.to_s
-
                 if(i == square.i && j == square.j)
-                    puts "same tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
+                    puts "Same  tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
                 else
-                    puts "checking tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
+                    puts "Check tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
                     if(tiles[i][j] == letters[index])
                         puts "[INFO] found " + letters[index] + " at (" + i.to_s + "," + j.to_s + ")"
                         loopFinishedFlag = true;
@@ -97,13 +99,14 @@ class CorrectWordsController < ApplicationController
                             newSquare.i = i;
                             newSquare.j = j;
                             newSquare.character = tiles[i][j];
-                            trackOtherLetters(tiles, newSquare, letters, index + 1)
+                            return trackOtherLetters(tiles, newSquare, letters, index + 1)
                             break;
                         end                        
                     end
                 end
             end
         end
+        return false;
     end
 
 end
