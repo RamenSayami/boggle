@@ -15,6 +15,8 @@ class CorrectWordsController < ApplicationController
                     render json: {status:true }, status: :ok and return
                 end
             }
+            puts "calling api"
+            Unirest.timeout(60);
             response = Unirest.get "https://aplet123-wordnet-search-v1.p.rapidapi.com/master?word=" + payload["word"],
             headers:{
                 "X-RapidAPI-Host" => "aplet123-wordnet-search-v1.p.rapidapi.com",
@@ -86,6 +88,7 @@ class CorrectWordsController < ApplicationController
         puts " "
         puts "[LOG] tracking next tile for " + square.i.to_s + "," + square.j.to_s + "=" + square.character
         puts "[INFO] searching for " + letters[index]
+
         rowStart = (square.i - 1 <0) ? 0 : square.i - 1
         rowEnd = (square.i + 1 ) > 3 ? 3 : square.i + 1
         puts "{LOG} StartRow:" + rowStart.to_s + " EndRow:" + rowEnd.to_s
@@ -109,20 +112,19 @@ class CorrectWordsController < ApplicationController
                         puts "index = " + index.to_s
                         
                         if(letters.length-1 == index)
-                            return true;
+                            validatorArray.push(true);
                         else
                             newSquare = Square.new
                             newSquare.i = i;
                             newSquare.j = j;
                             newSquare.character = tiles[i][j];
-                            return trackOtherLetters(tiles, newSquare, letters, index + 1)
-                            break;
+                            validatorArray.push(trackOtherLetters(tiles, newSquare, letters, index + 1))
                         end                        
                     end
                 end
             end
         end
-        return false;
+        return validatorArray.any?;
     end
 
 end
