@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Starter guide used:
+https://guides.rubyonrails.org/v2.3/getting_started.html
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+ruby 2.7.1p83 (2020-03-31 revision a0c7c23c9c) [x86_64-linux]
 
 * Database initialization
+rails db:seed
 
-* How to run the test suite
+* Configuration
+Database: sqlite3
+
+* How to run
+rails s
+This should run the backend server at http://localhost:3000/
 
 * Services (job queues, cache servers, search engines, etc.)
+Wordnet Search API
 
-* Deployment instructions
-
-* ...
