@@ -80,6 +80,11 @@ class CorrectWordsController < ApplicationController
         board.squares.each{ |square|
             tiles[square.i][square.j] = square.character;
         }
+        for i in 0..3 do
+            for j in 0..3 do
+                puts tiles[i][j]
+            end
+        end
         return tiles;
     end
 
@@ -104,7 +109,11 @@ class CorrectWordsController < ApplicationController
                 if(i == square.i && j == square.j)
                     puts "Same  tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
                 else
-                    puts "Check tile " + i.to_s + "," + j.to_s + "=" + tiles[i][j] + " ? " + letters[index]
+                    puts "Check tile " 
+                    puts i.to_s + "," 
+                    puts j.to_s + "=" 
+                    puts tiles[i][j] + " ? " 
+                    puts letters[index]
                     if(tiles[i][j] == letters[index])
                         puts "[INFO] found " + letters[index] + " at (" + i.to_s + "," + j.to_s + ")"
                         loopFinishedFlag = true;

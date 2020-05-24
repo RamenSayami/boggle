@@ -4,94 +4,94 @@ one:
   i: 0
   j: 0
   character: I
-  board: board1
+  board_id: 1
 
 two:
   i: 0
   j: 1
   character: C
-  board: board1
+  board_id: 1
 
 three:
   i: 0
   j: 2
   character: L
-  board: board1
+  board_id: 1
 
 four:
   i: 0
   j: 3
   character: S
-  board: board1
+  board_id: 1
   
 five:
   i: 1
   j: 0
   character: E
-  board: board1
+  board_id: 1
 
 six:
   i: 1
   j: 1
   character: A
-  board: board1
+  board_id: 1
 
 seven:
   i: 1
   j: 2
   character: I
-  board: board1
+  board_id: 1
 
 eight:
   i: 1
   j: 3
   character: A
-  board: board1
+  board_id: 1
 
 ten:
   i: 2
   j: 0
   character: P
-  board: board1
+  board_id: 1
 
 eleven:
   i: 2
   j: 1
   character: S
-  board: board1
+  board_id: 1
 
 twelve:
   i: 2
   j: 2
   character: N
-  board: board1
+  board_id: 1
 
 thirteen:
   i: 2
   j: 3
   character: T
-  board: board1
+  board_id: 1
 
 fourteen:
   i: 3
   j: 0
   character: Q
-  board: board1
+  board_id: 1
 
 fifteen:
   i: 3
   j: 1
   character: S
-  board: board1
+  board_id: 1
 
 sixteen:
   i: 3
   j: 2
   character: O
-  board: board1
+  board_id: 1
 
 seventeen:
   i: 3
   j: 3
   character: I
-  board: board1
+  board_id: 1

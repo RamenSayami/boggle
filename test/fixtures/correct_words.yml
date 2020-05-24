@@ -2,40 +2,40 @@
 
 word1:
   word: PEA
-  board: board
+  board_id: 1
 
 word2:
   word: APE
-  board: board
+  board_id: 1
 
 word3:
   word: APES
-  board: board
+  board_id: 1
 
 word4:
   word: CAKE
-  board: board
+  board_id: 1
 
 word5:
   word: PEAS
-  board: board
+  board_id: 1
 
 word6:
   word: PANT
-  board: board
+  board_id: 1
 
 word7:
   word: PASS
-  board: board
+  board_id: 1
 
 word8:
   word: SUN
-  board: board
+  board_id: 1
 
 word9:
   word: CLASP
-  board: board
+  board_id: 1
 
 word10:
   word: NOT
-  board: board
+  board_id: 1
