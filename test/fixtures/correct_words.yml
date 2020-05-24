@@ -1,9 +1,41 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  word: MyString
-  board: one
+word1:
+  word: PEA
+  board: board
 
-two:
-  word: MyString
-  board: two
+word2:
+  word: APE
+  board: board
+
+word3:
+  word: APES
+  board: board
+
+word4:
+  word: CAKE
+  board: board
+
+word5:
+  word: PEAS
+  board: board
+
+word6:
+  word: PANT
+  board: board
+
+word7:
+  word: PASS
+  board: board
+
+word8:
+  word: SUN
+  board: board
+
+word9:
+  word: CLASP
+  board: board
+
+word10:
+  word: NOT
+  board: board

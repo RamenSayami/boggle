@@ -1,7 +1,5 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-
-two:
-  title: MyString
+board1:
+  id: 1
+  title: Level 1
