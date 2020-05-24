@@ -25,13 +25,17 @@ https://guides.rubyonrails.org/v2.3/getting_started.html
 ### Configuration:
 ##### Database: sqlite3
 
-### Database initialization:
-##### `rails db:seed`
-
 ### Services (job queues, cache servers, search engines, etc.)<br/>
 #### Wordnet Search API
 Side note: Wordnet Search API is quiet slow. Takes anywhere from 20 - 60 seconds.<br/>
 So when submitting a word, which is not a correct word recorded in the database, it may take some time. Please be patient.<br/>
+
+
+### Database initialization:
+##### `rails db:seed`
+
+### To run tests:
+##### `rails test`
 
 ### How to run:
 ##### `rails s`<br/>
